@@ -8,18 +8,10 @@
    
     <body>
 
-        <!-- 
-        < -- Canvases in HTML are the same as canvases in real life
-        < -- They let you draw graphics where javascript is the paintbrush used 
-        < -- inside the tag, you can define attributes (id is used to let the javscript code know where you want to draw, width and height are intuitive)
-         -->
         <canvas id="myCanvas" width="480" height="320"></canvas>
-        
-        <!-- 
-        < -- This is where you tell the paintbrush what to draw
-         -->
+
         <script>
-            /*declaring a whole bunch of variables            
+            // JavaScript code goes here
             var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext("2d");
 
@@ -57,9 +49,6 @@
             var score = 0;
             var lives = 3;
 
-            */
-
-            /*Instructions for drawing
             function drawBall() {
                 ctx.beginPath();
                 ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -153,9 +142,7 @@
                 }
                 requestAnimationFrame(draw);
             }
-            */
             
-            /*Checking stuff
             function collisionDetection() {
                 for(c=0; c<brickColumnCount; c++) {
                     for(r=0; r<brickRowCount; r++) {
@@ -201,11 +188,7 @@
                     paddleX = relativeX - paddleWidth/2;
                 }
             }
-            */
-            
-            /*Actually tells the code to follow the instructions
             draw();
-            */
         </script>
 
     </body>
