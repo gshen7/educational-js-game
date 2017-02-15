@@ -10,7 +10,6 @@
         <canvas id="myCanvas" width="480" height="320"></canvas>
 
         <script>
-            // JavaScript code goes here
             var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext("2d");
 
@@ -38,12 +37,12 @@
             var brickOffsetLeft = 30;
             
             var bricks = [];
-                for(c=0; c<brickColumnCount; c++) {
-                    bricks[c] = [];
-                    for(r=0; r<brickRowCount; r++) {
-                        bricks[c][r] = { x: 0, y: 0, status: 1 };
-                    }
+            for(c=0; c<brickColumnCount; c++) {
+                bricks[c] = [];
+                for(r=0; r<brickRowCount; r++) {
+                    bricks[c][r] = { x: 0, y: 0, status: 1 };
                 }
+            }
 
             var score = 0;
             var lives = 3;
@@ -187,6 +186,7 @@
                     paddleX = relativeX - paddleWidth/2;
                 }
             }
+
             draw();
         </script>
 
