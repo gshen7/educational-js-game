@@ -1,9 +1,7 @@
-* { 
-    padding: 0; 
-    margin: 0; 
-}
+/* nothing really important in the css */
+/* just setting some parameters for the canvas */
 canvas { 
     background: #eee; 
     display: block; 
     margin: 0 auto; 
-    }
+}
