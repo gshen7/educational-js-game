@@ -24,7 +24,8 @@
          -->
         <script>
             // Variable declarations
-            
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
 
 
             // Drawing functions for specific things
@@ -55,13 +56,16 @@
 
 
             // Main draw function
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            function draw() {                
                 
-                requestAnimationFrame(draw);
+                requestAnimationFrame(draw); // this "refreshes" every time
             }
 
-            // Handlers for keyboard and mouse input            
+            // Handlers for keyboard and mouse input    
+            document.addEventListener("keydown", keyDownHandler, false);
+            document.addEventListener("keyup", keyUpHandler, false);
+            document.addEventListener("mousemove", mouseMoveHandler, false);
+                    
             function keyDownHandler(e) {
                 
             }
