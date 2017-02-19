@@ -1,5 +1,5 @@
 0. show the style sheet, go through the skeleton describing each part
-1. start drawing
+1. start drawing [PROVIDED]
     * draw a ball (in drawBall function) - note: can also draw other shapes (we will later)
     ``` 
     ctx.beginPath();
@@ -9,7 +9,7 @@
     ctx.closePath();
     ```
     * add a line that calls drawBall in the main draw function
-2. add some movement
+2. add some movement [LIVE CODING]
     * declare some variables for the position of the ball and replace the first parameters of the drawBall arc call
     ```
     var x = canvas.width/2;
@@ -29,7 +29,7 @@
     ```
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ```
-3. the ball just leaves the screen now, need to bounce it off sides
+3. the ball just leaves the screen now, need to bounce it off sides [LIVE CODING]
     * declare a variable for the radius of the ball and replace the third parameter in arc call
     ```
     var ballRadius = 10;
@@ -61,7 +61,7 @@
         dy = -dy;
     }
     ```
-4. paddle
+4. paddle [SOME PROVIDED, SOME LIVE]
     * draw a paddle, rectangle instead of circle at the bottom of canvas - same kind of process - declare some vars for size and position, drawPaddle function
     ```
     var paddleHeight = 10;
@@ -71,7 +71,7 @@
     //.
     //.
     //.
-
+    //PROVIDED
      function drawPaddle() {
         ctx.beginPath();
         ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -84,6 +84,11 @@
     ```
     var rightPressed = false;
     var leftPressed = false;
+
+    //[PROVIDED] 
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    document.addEventListener("mousemove", mouseMoveHandler, false);
 
     function keyDownHandler(e) {
         if(e.keyCode == 39) {
@@ -118,7 +123,7 @@
     }
     ```
     * lastly, call drawPaddle from main draw function
-5. right now you can miss the ball but it'll just bounce back up - change that
+5. right now you can miss the ball but it'll just bounce back up - change that [LIVE]
     * when the ball hits the bottom (which we detected before) dont just change direction, do something else 
     ```
     if(y + dy < ballRadius) {
@@ -142,7 +147,7 @@
         }
     }
     ```
-6. bricks to break
+6. bricks to break [SOME PROVIDED, SOME LIVE]
     * a bunch of variables to declare then instead of making each break individually we use a loop structure and a 2d array
     ```
     var brickRowCount = 3;
@@ -161,7 +166,7 @@
         }
     }
     ```
-    * the actual drawing function involves a loop too
+    * [PROVIDED] the actual drawing function involves a loop too
     ```
     function drawBricks() {
         for(c=0; c<brickColumnCount; c++) {
@@ -180,7 +185,7 @@
     }
     ```
     * add drawbircks call in main draw function
-7. actually breaking the bricks
+7. [LIVE] actually breaking the bricks
     * collision detection function - collision logic is true if ball x greater than brick x and ball x less than brick x plus brick width and ball y greater than brick y and ball y less than brick y plus height of brick
     ```
     function collisionDetection() {
@@ -218,7 +223,7 @@
     }
     ```
     * also add call to collision detection 
-8. score
+8. score [LIVE and PROVIDED]
     * need a variable for score and lives and draw functions for both to display
     ```
     var score = 0;
@@ -228,6 +233,7 @@
     //.
     //.
 
+    //PROVIDED
     function drawScore() {
         ctx.font = "16px Arial";
         ctx.fillStyle = "#0095DD";
