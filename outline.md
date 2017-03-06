@@ -1,3 +1,6 @@
+##Short Presentation on Javascript Basics
+
+##Coding Demo of Brick Breaker Game
 0. show the style sheet, go through the skeleton describing each part
 1. start drawing [PROVIDED]
     * draw a ball (in drawBall function) - note: can also draw other shapes (we will later)
@@ -273,3 +276,6 @@
     }
     ```
     * add draw score, lives call in draw 
+
+##Depending on Time, Make Pong or More Levels?
+
